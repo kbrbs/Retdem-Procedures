@@ -96,7 +96,8 @@
 .dark-mode .header-subtitle,
 .dark-mode .hero-subtitle,
 .dark-mode .feature-card:hover h3,
-.dark-mode .footer-section h4 {
+.dark-mode .footer-section h4,
+.dark-mode .blog-footer a {
     color: var(--primary-teal) !important;
 }
 
