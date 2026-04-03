@@ -1,4 +1,4 @@
-/* ========== Page Header ========== */
+﻿/* ========== Page Header ========== */
 .page-header {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
     color: var(--secondary-light);
@@ -404,7 +404,7 @@
 .read-more-btn {
     background: var(--secondary-light);
     padding-left: var(--spacing-md);
-    border: 1px solid var(--border-color);
+    border: 1px none var(--border-color);
     padding: 6px 16px;
     border-radius: var(--radius-sm);
     font-size: 0.85rem;
