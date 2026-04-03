@@ -6,23 +6,23 @@
     --primary-blue-deep: #16324c;
     --primary-teal: #00a8b5;
     --primary-teal-rgb: 0, 168, 181;
-    
+
     /* Secondary Colors */
     --secondary-gray: #f0f4f8;
     --secondary-light: #ffffff;
     --secondary-dark-gray: #4a5568;
-    
+
     /* Accent Colors */
     --accent-purple: #667eea;
     --accent-purple-rgb: 102, 126, 234;
     --accent-pink: #f5576c;
     --accent-cyan: #00f2fe;
-    
+
     /* Neutral Colors */
     --border-color: #e2e8f0;
     --text-primary: #1a202c;
     --text-secondary: #718096;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -30,7 +30,7 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
-    
+
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-size-base: 1rem;
@@ -39,12 +39,12 @@
     --font-size-2xl: 2rem;
     --font-size-3xl: 2.5rem;
     --font-size-4xl: 3rem;
-        /* Border Radius */
+    /* Border Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease-in-out;
     --transition-normal: 0.3s ease-in-out;
@@ -89,8 +89,8 @@
 .dark-mode strong,
 .dark-mode li,
 .dark-mode span,
-.dark-mode label{
-    color: var(--text-primary)!important;
+.dark-mode label {
+    color: var(--text-primary) !important;
 }
 
 .dark-mode .header-subtitle,
@@ -120,6 +120,68 @@
     color: var(--secondary-light);
 }
 
+.dark-mode .blog-category {
+    background: rgba(0, 168, 181, 0.2);
+    color: var(--primary-teal);
+}
+
+.dark-mode .blog-date,
+.dark-mode .read-time,
+.dark-mode .blog-card p,
+.dark-mode .author-info span,
+.dark-mode .read-more-btn {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .read-more-btn {
+    background: var(--secondary-light) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .read-more-btn:hover {
+    border-color: var(--primary-teal) !important;
+    color: var(--primary-teal) !important;
+}
+
+.dark-mode .read-more,
+.dark-mode .blog-sidebar-title,
+.dark-mode .section-label {
+    color: var(--primary-teal) !important;
+}
+
+.dark-mode .spotlight-badge {
+    background: var(--primary-teal) !important;
+    color: #fff !important;
+}
+
+.dark-mode .filter-btn {
+    background: var(--secondary-gray);
+    color: var(--text-primary) !important;
+    border: 1px solid transparent;
+}
+
+.dark-mode .filter-btn:hover {
+    background: var(--border-color);
+}
+
+.dark-mode .filter-btn.active {
+    background: var(--primary-teal);
+    color: #fff !important;
+}
+
+.dark-mode .category-header h3 {
+    background: var(--secondary-light) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .blog-card h3,
+.dark-mode .spotlight-card h3,
+.dark-mode .trending-content h4,
+.dark-mode .blog-main-title {
+    color: var(--text-primary) !important;
+}
+
+
 /* ========== Reset & Base Styles ========== */
 * {
     margin: 0;
@@ -127,7 +189,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -450,9 +513,17 @@ a {
     transform: translateY(0);
 }
 
-.js .feature-card:nth-child(1) { transition-delay: 0.05s; }
-.js .feature-card:nth-child(2) { transition-delay: 0.12s; }
-.js .feature-card:nth-child(3) { transition-delay: 0.19s; }
+.js .feature-card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.js .feature-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.js .feature-card:nth-child(3) {
+    transition-delay: 0.19s;
+}
 
 .feature-card:hover {
     transform: translateY(-8px);
@@ -594,6 +665,7 @@ a {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -604,6 +676,7 @@ a {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -614,6 +687,7 @@ a {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -621,9 +695,12 @@ a {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) translateX(0px);
     }
+
     50% {
         transform: translateY(-20px) translateX(10px);
     }
@@ -724,6 +801,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
