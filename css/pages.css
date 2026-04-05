@@ -972,7 +972,6 @@
     margin: 0 auto var(--spacing-lg);
     background: var(--secondary-gray);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0, 168, 181, 0.15);
