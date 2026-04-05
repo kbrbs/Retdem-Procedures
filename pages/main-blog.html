@@ -12,9 +12,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/blog-article.css">
     <script>
+        // Immediately apply dark mode to prevent FOUC
         (function() {
             const darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'true') {
+            if (darkMode === 'true' || (darkMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
@@ -22,7 +23,7 @@
 </head>
 
 <body>
-    <div id="header-placeholder"></div>
+    <header id="header-placeholder" data-include="../partials/header.html"></header>
 
     <div class="blog-header">
         <div class="header-nav">
