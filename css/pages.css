@@ -85,7 +85,7 @@
     padding-right: var(--spacing-sm);
     /* For Firefox */
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-teal) transparent;
+    scrollbar-color: var(--primary-blue) transparent;
 }
 
 /* WebKit (Chrome, Safari, Edge) Scrollbar styling */
@@ -108,7 +108,7 @@
 
 .location-item {
     padding: var(--spacing-md);
-    background: var(--secondary-gray);
+    /* background: var(--secondary-gray); */
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all var(--transition-normal);
@@ -117,13 +117,13 @@
 
 .location-item:hover {
     background: var(--border-color);
-    border-left-color: var(--primary-teal);
+    border-left-color: var(--primary-blue);
     transform: translateX(4px);
 }
 
 .location-item.active {
     background: rgba(0, 168, 181, 0.1);
-    border-left-color: var(--primary-teal);
+    border-left-color: var(--primary-blue);
 }
 
 .location-item strong {
@@ -187,17 +187,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border-top: 4px solid var(--primary-teal);
+    border-top: 4px solid var(--primary-blue);
     transition: all var(--transition-normal);
 }
 
 .description-content {
     overflow-y: auto;
-    padding-right: var(--spacing-sm);
+    padding-right: var(--spacing-lg);
     flex: 1 1 auto; /* Allow to take available space and shrink if necessary */
     /* Firefox */
     scrollbar-width: thin;
-    scrollbar-color: var(--primary-teal) transparent;
+    scrollbar-color: var(--primary-blue) transparent;
 }
 
 /* WebKit (Chrome, Safari, Edge) Scrollbar styling */
@@ -1141,7 +1141,8 @@
 }
 
 .team-role {
-    color: var(--primary-teal);
+    /* color: var(--primary-teal); */
+    color: var(--text-secondary);
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
     font-size: 0.9rem;

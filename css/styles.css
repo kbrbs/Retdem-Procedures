@@ -1,27 +1,27 @@
 /* ========== CSS Variables & Root ========== */
 :root {
     /* Primary Colors */
-    --primary-dark: #0f1729;
-    --primary-blue: #1e3a5f;
-    --primary-blue-deep: #16324c;
-    --primary-teal: #00a8b5;
-    --primary-teal-rgb: 0, 168, 181;
+    --primary-dark: #001840; /* Deep blue */
+    --primary-blue: #102A71; /* Deep blue */
+    --primary-blue-deep: #0A1E51; /* Deeper blue */
+    --primary-teal: #F5C400; /* Accent yellow */
+    --primary-teal-rgb: 245, 196, 0;
 
     /* Secondary Colors */
-    --secondary-gray: #f0f4f8;
-    --secondary-light: #ffffff;
-    --secondary-dark-gray: #4a5568;
+    --secondary-light: #F5F0E0; /* Dirty white / cream */
+    --secondary-gray: #FFFBEA; /* Super pastel yellow */
+    --secondary-dark-gray: #102A71; /* Deep blue */
 
     /* Accent Colors */
-    --accent-purple: #667eea;
-    --accent-purple-rgb: 102, 126, 234;
-    --accent-pink: #f5576c;
-    --accent-cyan: #00f2fe;
+    --accent-purple: #F5C400;
+    --accent-purple-rgb: 245, 196, 0;
+    --accent-pink: #F1DC5F;
+    --accent-cyan: #F1DC5F;
 
     /* Neutral Colors */
-    --border-color: #e2e8f0;
-    --text-primary: #1a202c;
-    --text-secondary: #718096;
+    --border-color: rgba(16, 42, 113, 0.15); /* Tinted Blue Border */
+    --text-primary: #001840; /* Deep Blue Text */
+    --text-secondary: #102A71; /* Dark Blue Text */
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -58,21 +58,25 @@
 
 /* ========== Dark Mode ========== */
 .dark-mode {
-    --primary-dark: #0a101a;
-    --primary-blue: #16243a;
-    --primary-blue-deep: #0d1a2b;
-    --primary-teal: #00eeff;
-    --primary-teal-rgb: 0, 188, 212;
-    --secondary-gray: #232b36;
-    --secondary-light: #181e29;
-    --secondary-dark-gray: #bfc9d1;
-    --accent-purple: #8f9eff;
-    --accent-purple-rgb: 143, 158, 255;
-    --accent-pink: #ff6f91;
-    --accent-cyan: #00e6ff;
-    --border-color: #2d3748;
-    --text-primary: #e2e8f0;
-    --text-secondary: #a0aec0;
+    --primary-dark: #001840; /* Keep branding */
+    --primary-blue: #0A1E51; /* Darkened branding */
+    --primary-blue-deep: #001230; /* Extra dark base */
+    --primary-teal: #F1DC5F; /* Lighter yellow */
+    --primary-teal-rgb: 241, 220, 95;
+    
+    --secondary-gray: #1e3060; /* Medium blue */
+    --secondary-light: #001840; /* Base background now deeply dark */
+    --secondary-dark-gray: #4A63A8; /* Muted blue */
+    
+    --accent-purple: #F5C400; /* Distinct bright yellow */
+    --accent-purple-rgb: 245, 196, 0;
+    --accent-pink: #F1DC5F; /* Accent yellow */
+    --accent-cyan: #F5C400; /* Accent yellow */
+    
+    --border-color: rgba(245, 240, 224, 0.1); /* Subtle light line */
+    --text-primary: #F5F0E0; /* Cream text */
+    --text-secondary: #F1DC5F; /* Yellow muted text */
+    
     background-color: var(--secondary-light);
     color: var(--text-primary);
 }
@@ -125,7 +129,7 @@
 }
 
 .dark-mode .blog-category {
-    background: rgba(0, 168, 181, 0.2);
+    background: rgba(var(--primary-teal-rgb), 0.2);
     color: var(--primary-teal);
 }
 
@@ -134,7 +138,7 @@
 .dark-mode .blog-card p,
 .dark-mode .author-info span,
 .dark-mode .read-more-btn {
-    color: var(--text-secondary) !important;
+    color: var(--text-primary) !important;
 }
 
 .dark-mode .read-more-btn {
@@ -240,7 +244,7 @@ a {
 .navbar {
     background: var(--secondary-light);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 10000;
@@ -270,7 +274,7 @@ a {
 }
 
 .logo-icon img {
-    background-color: rgb(83, 255, 255);
+    background-color: var(--text-secondary);
     padding: 8px;
     border-radius: 10%;
     width: 45px;
@@ -398,7 +402,7 @@ a {
     right: -50%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(0, 168, 181, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(var(--primary-teal-rgb), 0.12) 0%, transparent 70%);
     animation: float 8s ease-in-out infinite;
 }
 
@@ -428,7 +432,7 @@ a {
 .hero-subtitle {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-sm);
-    color: var(--primary-teal);
+    color: var(--secondary-light);
     font-weight: 600;
 }
 
@@ -468,7 +472,7 @@ a {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 168, 181, 0.3);
+    box-shadow: 0 8px 16px rgba(var(--primary-teal-rgb), 0.28);
 }
 
 .btn-secondary {
@@ -482,6 +486,16 @@ a {
     transform: translateY(-2px);
 }
 
+/* Make the header dark-mode toggle readable in light mode */
+#darkModeToggle.btn.btn-secondary {
+    color: var(--primary-blue);
+    border-color: var(--border-color);
+}
+
+#darkModeToggle.btn.btn-secondary:hover {
+    background: var(--secondary-gray);
+}
+
 .btn-secondary:hover .fa-moon {
     color: var(--secondary-light-gray);
 }
@@ -489,7 +503,7 @@ a {
 /* ========== Features Section ========== */
 .features {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background: var(--secondary-gray);
+    /* background: var(--secondary-gray); */
 }
 
 .features-container {
@@ -516,7 +530,7 @@ a {
     border-radius: var(--radius-lg);
     text-align: center;
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    border: 1px solid var(--border-color);
     transition:
         transform var(--transition-normal),
         box-shadow var(--transition-normal),
@@ -628,7 +642,7 @@ a {
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    border: 1px solid var(--border-color);
 }
 
 /* ========== Footer ========== */
@@ -914,7 +928,8 @@ a {
         /* Modules Preview Section */
         .modules-section {
             padding: 5rem 2rem;
-            background: var(--bg-secondary);
+            /* background: var(--bg-secondary); */
+            background: var(--secondary-gray);
         }
         .modules-grid {
             display: grid;
@@ -926,6 +941,7 @@ a {
         }
         .module-card {
             background: var(--bg-card);
+            /* background-color: white; */
             border-radius: var(--radius-lg);
             padding: 2rem;
             box-shadow: var(--shadow-sm);
