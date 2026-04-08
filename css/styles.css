@@ -1699,7 +1699,7 @@ a {
 
     .home .hero-image {
         max-width: 100%;
-        transform: translate(8%, 0);
+        transform: translate(0%, 0);
         top: 0;
     }
 }
