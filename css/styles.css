@@ -1016,7 +1016,7 @@ a {
         flex-direction: column;
     }
 
-    .home .navbar {
+    /* .home .navbar {
         position: sticky;
         background: var(--primary-dark);
         border-bottom: 1px solid rgba(var(--primary-teal-rgb), 0.18);
@@ -1028,7 +1028,7 @@ a {
 
     .home .nav-link {
         border-bottom-color: rgba(var(--primary-teal-rgb), 0.18);
-    }
+    } */
 
     .home .hero {
         padding-top: var(--spacing-2xl);
